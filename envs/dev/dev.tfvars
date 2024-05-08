@@ -16,7 +16,7 @@ vnets = {
 rgs = {
   first_rg = {
     name     = "storagerg"
-    location = "westeurope"
+    location = "uksouth"
   }
   second_rg = {
     name     = "vmsrg"

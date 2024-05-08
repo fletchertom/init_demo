@@ -3,5 +3,5 @@ module "networking" {
 
   rgs                     = var.rgs
   vnets                   = var.vnets
-  deploy_storage_accounts = true
+  deploy_storage_accounts = false
 }
