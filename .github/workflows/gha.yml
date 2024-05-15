@@ -1,13 +1,15 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
+
+name: AzureLoginSample
+
 jobs:
-  check-bats-version:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in with Azure
+        uses: azure/login@v1
         with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
