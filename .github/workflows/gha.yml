@@ -1,6 +1,6 @@
 on: [push]
 
-name: AzureLoginSample
+name: Tom's Demo
 
 env:
   ARM_CLIENT_ID: "${{ secrets.AZURE_CLIENT_ID }}"
