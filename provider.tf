@@ -7,11 +7,11 @@ terraform {
   }
   # Update this block with the location of your terraform state file
   backend "azurerm" {
-    resource_group_name  = "tomedf"
-    storage_account_name = "edfdemotf"
+    resource_group_name  = "terraform"
+    storage_account_name = "eisworkshop"
     container_name       = "state"
-    subscription_id      = "36122110-e250-404d-a477-7ffd131a6b6f"
-    key                  = "init.tfstate"
+    subscription_id      = "652a7ae0-ba5c-44a3-aa80-69e61171f84c"
+    key                  = "tom.tfstate"
   }
 }
 
