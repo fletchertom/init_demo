@@ -1,2 +1,15 @@
 trigger:
   - main
+
+- stage: 'Terraform_Apply'
+  displayName: 'Terraform Apply'
+  jobs:
+  - job: 'Terraform_Apply'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: TerraformCLI@0
+      displayName: 'terraform apply'
+      inputs:
+        command: apply
+        environmentServiceName: 'My Azure Service Connection'
